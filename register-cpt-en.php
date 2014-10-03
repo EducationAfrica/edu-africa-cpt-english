@@ -5,7 +5,7 @@
  * Plugin Name:       Education Africa - CPT-EN
  * Plugin URI:
  * Description:       Registers the custom post types for this site in English.
- * Version:           1.0.0
+ * Version:           1.0.4
  * Author:            Singlebrook
  * Author URI:        http://singlebrook.com/
  * License:           GPL-2.0+
@@ -16,7 +16,7 @@
 add_action( 'init', 'github_plugin_updater_test_init' );
 function github_plugin_updater_test_init() {
 
-  include_once 'includes/updater.php';
+  include_once('includes/updater.php');
 
   define( 'WP_GITHUB_FORCE_UPDATE', true );
 
@@ -24,14 +24,14 @@ function github_plugin_updater_test_init() {
 
     $config = array(
       'slug' => plugin_basename( __FILE__ ),
-      'proper_folder_name' => 'eduafrica-cpt-de',
+      'proper_folder_name' => 'edu-africa-cpt-english-master',
       'api_url' => 'https://api.github.com/repos/singlebrook/edu-africa-cpt-english',
-      'raw_url' => 'https://raw.github.com//singlebrook/edu-africa-cpt-english/master',
+      'raw_url' => 'https://raw.github.com/singlebrook/edu-africa-cpt-english/master',
       'github_url' => 'https://github.com/singlebrook/edu-africa-cpt-english',
       'zip_url' => 'https://github.com/singlebrook/edu-africa-cpt-english/archive/master.zip',
       'sslverify' => true,
-      'requires' => '1.0',
-      'tested' => '1.0',
+      'requires' => '4.0',
+      'tested' => '4.0',
       'readme' => 'README.md',
       'access_token' => '',
     );
