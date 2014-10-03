@@ -13,6 +13,34 @@
  * Text Domain:       plugin-name
  */
 
+add_action( 'init', 'github_plugin_updater_test_init' );
+function github_plugin_updater_test_init() {
+
+  include_once 'includes/updater.php';
+
+  define( 'WP_GITHUB_FORCE_UPDATE', true );
+
+  if ( is_admin() ) { // note the use of is_admin() to double check that this is happening in the admin
+
+    $config = array(
+      'slug' => plugin_basename( __FILE__ ),
+      'proper_folder_name' => 'eduafrica-cpt-de',
+      'api_url' => 'https://api.github.com/repos/singlebrook/edu-africa-cpt-english',
+      'raw_url' => 'https://raw.github.com//singlebrook/edu-africa-cpt-english/master',
+      'github_url' => 'https://github.com/singlebrook/edu-africa-cpt-english',
+      'zip_url' => 'https://github.com/singlebrook/edu-africa-cpt-english/archive/master.zip',
+      'sslverify' => true,
+      'requires' => '1.0',
+      'tested' => '1.0',
+      'readme' => 'README.md',
+      'access_token' => '',
+    );
+
+    new WP_GitHub_Updater( $config );
+
+  }
+}
+
 // If this file is called directly, abort.
 if ( ! defined( 'WPINC' ) ) {
 	die;
