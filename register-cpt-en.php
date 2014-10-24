@@ -5,7 +5,7 @@
  * Plugin Name:       Education Africa - Network Custom Post Types
  * Plugin URI:
  * Description:       Registers the custom post types for this site.
- * Version:           1.0.7
+ * Version:           1.0.8
  * Author:            Singlebrook
  * Author URI:        http://singlebrook.com/
  * License:           GPL-2.0+
@@ -107,7 +107,7 @@ function ea_home_slide_init() {
     'capability_type' => 'post',
     'hierarchical' => false,
     'menu_position' => null,
-    'supports' => array( 'title', 'editor' )
+    'supports' => array( 'title', 'editor', 'revisions' )
   );
 
   register_post_type( $post_type_name , $args );
@@ -150,7 +150,7 @@ function ea_events_init() {
     'capability_type' => 'post',
     'hierarchical' => false,
     'menu_position' => null,
-    'supports' => array( 'title', 'editor' )
+    'supports' => array( 'title', 'editor', 'revisions' )
   );
 
   register_post_type( $post_type_name , $args );
@@ -192,7 +192,7 @@ function ea_make_a_face_init() {
     'capability_type' => 'post',
     'hierarchical' => false,
     'menu_position' => null,
-    'supports' => array( 'title', 'editor' )
+    'supports' => array( 'title', 'editor', 'revisions' )
   );
 
   register_post_type( $post_type_name , $args );
@@ -235,7 +235,7 @@ function ea_project_init() {
     'capability_type' => 'post',
     'hierarchical' => false,
     'menu_position' => null,
-    'supports' => array( 'title', 'editor' )
+    'supports' => array( 'title', 'editor', 'revisions' )
   );
 
   register_post_type( $post_type_name , $args );
@@ -277,7 +277,7 @@ function ea_timeline_init() {
     'capability_type' => 'post',
     'hierarchical' => false,
     'menu_position' => null,
-    'supports' => array( 'title', 'editor' )
+    'supports' => array( 'title', 'editor', 'revisions' )
   );
 
   register_post_type( $post_type_name , $args );
